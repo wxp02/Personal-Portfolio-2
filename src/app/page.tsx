@@ -47,7 +47,7 @@ export default function Portfolio() {
             >
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-600 relative z-10">
                 <img
-                  src="/placeholder.svg?height=320&width=320"
+                  src="/profile.png?height=320&width=320"
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />
@@ -81,7 +81,7 @@ export default function Portfolio() {
 
                 <div className="flex items-center gap-4 ml-4">
                   <motion.a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/jeremy-p-1833291ab/"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ y: -5, scale: 1.1 }}
@@ -90,7 +90,7 @@ export default function Portfolio() {
                     <Linkedin className="h-5 w-5 text-blue-600" />
                   </motion.a>
                   <motion.a
-                    href="https://github.com"
+                    href="https://github.com/wxp02"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ y: -5, scale: 1.1 }}
@@ -563,7 +563,7 @@ export default function Portfolio() {
             </p>
             <div className="flex gap-4">
               <Link
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/jeremy-p-1833291ab/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-blue-600 transition-colors"
@@ -572,7 +572,7 @@ export default function Portfolio() {
                 <span className="sr-only">LinkedIn</span>
               </Link>
               <Link
-                href="https://github.com"
+                href="https://github.com/wxp02"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-blue-600 transition-colors"
