@@ -31,55 +31,32 @@ export default function Portfolio() {
         <section
           ref={heroRef}
           id="home"
-          className="min-h-screen flex items-center px-8 md:px-16 lg:px-24 relative overflow-hidden"
+          className="min-h-screen flex flex-col justify-center px-8 md:px-16 lg:px-24 relative overflow-hidden"
         >
           <div className="absolute top-0 left-0 w-full h-full">
             <div className="absolute top-[20%] right-[10%] w-[500px] h-[500px] rounded-full bg-gradient-to-r from-blue-500/20 to-blue-300/10 blur-3xl" />
             <div className="absolute bottom-[10%] left-[5%] w-[300px] h-[300px] rounded-full bg-gradient-to-r from-blue-300/10 to-blue-500/20 blur-3xl" />
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
+          <div className="max-w-4xl mx-auto text-center relative z-10 flex-1 flex items-center">
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="relative"
-            >
-              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-600 relative z-10">
-                <img
-                  src="/profile.png?height=320&width=320"
-                  alt="Profile"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div
-                className="absolute inset-0 w-64 h-64 md:w-80 md:h-80 rounded-full bg-blue-500 blur-md -z-10 animate-pulse"
-                style={{ animationDuration: "4s" }}
-              />
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <h2 className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-2">
+              <h2 className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-6">
                 HI THERE! I'M
               </h2>
-              <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              <h1 className="text-4xl md:text-6xl font-bold mb-8">
                 <span className="text-blue-600">JEREMY</span> POH
               </h1>
-              <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-                A Software/Data/Analytics Engineer passionate about creating
+              <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-12 leading-loose">
+                A software engineer/data scientist passionate about creating
                 interactive applications and data-driven solutions.
               </p>
 
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                  Resume
-                </Button>
-
-                <div className="flex items-center gap-4 ml-4">
+              <div className="flex flex-wrap gap-4 justify-center">
+                <div className="flex items-center gap-4">
                   <motion.a
                     href="https://www.linkedin.com/in/jeremy-p-1833291ab/"
                     target="_blank"
@@ -103,19 +80,20 @@ export default function Portfolio() {
             </motion.div>
           </div>
 
-          <motion.div
-            className="absolute bottom-10 left-1/2 -translate-x-1/2"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Number.POSITIVE_INFINITY, duration: 2 }}
-          >
-            <a
-              href="#about"
-              className="flex flex-col items-center text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors"
+          <div className="max-w-4xl mx-auto text-center relative z-10 pb-10">
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ repeat: Number.POSITIVE_INFINITY, duration: 2 }}
             >
-              <span className="text-sm mb-2">Scroll Down</span>
-              <ArrowDown className="h-5 w-5" />
-            </a>
-          </motion.div>
+              <a
+                href="#about"
+                className="flex flex-col items-center text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors"
+              >
+                <span className="text-sm mb-2">Scroll Down</span>
+                <ArrowDown className="h-5 w-5" />
+              </a>
+            </motion.div>
+          </div>
         </section>
 
         {/* Education and Experience Section */}
