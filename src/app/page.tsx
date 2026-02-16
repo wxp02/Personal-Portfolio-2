@@ -13,7 +13,7 @@ import {
 import Link from "next/link";
 
 import { Button } from "../components/ui/button";
-import { Sidebar } from "../components/sidebar";
+import { ScrollIndicator } from "../components/scroll-indicator";
 
 export default function Portfolio() {
   const heroRef = useRef(null);
@@ -23,15 +23,15 @@ export default function Portfolio() {
   const contactRef = useRef(null);
 
   return (
-    <div className="flex min-h-screen bg-background">
-      <Sidebar />
+    <div className="min-h-screen bg-background">
+      <ScrollIndicator />
 
-      <main className="flex-1 ml-[80px]">
+      <main className="w-full">
         {/* Hero Section */}
         <section
           ref={heroRef}
           id="home"
-          className="min-h-screen flex flex-col justify-center px-8 md:px-16 lg:px-24 relative overflow-hidden"
+          className="min-h-screen flex flex-col justify-center px-6 md:px-16 lg:px-24 relative overflow-hidden"
         >
           <div className="absolute top-0 left-0 w-full h-full">
             <div className="absolute top-[20%] right-[10%] w-[500px] h-[500px] rounded-full bg-gradient-to-r from-blue-500/20 to-blue-300/10 blur-3xl" />
@@ -229,6 +229,30 @@ export default function Portfolio() {
                   <div className="relative pl-8 border-l-2 border-blue-600">
                     <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-blue-600"></div>
                     <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-md">
+                      <h4 className="font-bold text-lg">Data Scientist</h4>
+                      <div className="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400 mt-1 mb-2">
+                        <div className="w-6 h-6 flex-shrink-0">
+                          <img
+                            src="/wealthsimple.svg?height=24&width=24"
+                            alt="Wealthsimple Logo"
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                        <span>Wealthsimple</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-3">
+                        <Calendar className="h-4 w-4" />
+                        <span>Sep 2025 - Current</span>
+                      </div>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">
+                        Enhancing the referral program with data
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="relative pl-8 border-l-2 border-blue-600">
+                    <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-blue-600"></div>
+                    <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-md">
                       <h4 className="font-bold text-lg">Analytics Engineer</h4>
                       <div className="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400 mt-1 mb-2">
                         <div className="w-6 h-6 flex-shrink-0">
@@ -304,7 +328,9 @@ export default function Portfolio() {
                   <div className="relative pl-8 border-l-2 border-blue-600">
                     <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-blue-600"></div>
                     <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-md">
-                      <h4 className="font-bold text-lg">Analytics Engineer</h4>
+                      <h4 className="font-bold text-lg">
+                        Data/Analytics Engineer
+                      </h4>
                       <div className="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400 mt-1 mb-2">
                         <div className="w-6 h-6 flex-shrink-0">
                           <img
@@ -329,9 +355,7 @@ export default function Portfolio() {
                   <div className="relative pl-8 border-l-2 border-blue-600">
                     <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-blue-600"></div>
                     <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-md">
-                      <h4 className="font-bold text-lg">
-                        Software Engineer / Data Science Developer
-                      </h4>
+                      <h4 className="font-bold text-lg">Software Engineer</h4>
                       <div className="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400 mt-1 mb-2">
                         <div className="w-6 h-6 flex-shrink-0">
                           <img
@@ -347,7 +371,7 @@ export default function Portfolio() {
                         <span>May 2022 - Dec 2022</span>
                       </div>
                       <p className="text-gray-600 dark:text-gray-400 text-sm">
-                        Built financial models and tools to optimize workflow
+                        Built financial tools to optimize workflow
                       </p>
                     </div>
                   </div>
@@ -377,7 +401,7 @@ export default function Portfolio() {
               </h2>
               <p className="text-gray-600 dark:text-gray-400 max-w-2xl">
                 A selection of my recent work across software development and
-                data engineering.
+                data science.
               </p>
             </motion.div>
 
@@ -627,58 +651,13 @@ function ProjectCard({ project, index }) {
 // Sample data
 const projects = [
   {
-    title: "Data Analytics Platform",
+    title: "CanMNT Live",
     description:
-      "A full-stack analytics platform with interactive dashboards and data visualization.",
-    image: "/placeholder.svg?height=200&width=400",
-    tags: ["React", "D3.js", "Python", "PostgreSQL"],
-    demoUrl: "#",
-    codeUrl: "#",
-  },
-  {
-    title: "Machine Learning API",
-    description:
-      "A REST API for machine learning model predictions with scalable infrastructure.",
-    image: "/placeholder.svg?height=200&width=400",
-    tags: ["Python", "FastAPI", "TensorFlow", "Docker"],
-    demoUrl: "#",
-    codeUrl: "#",
-  },
-  {
-    title: "Portfolio Website",
-    description:
-      "A responsive portfolio website with dark mode and animations.",
-    image: "/placeholder.svg?height=200&width=400",
-    tags: ["Next.js", "Framer Motion", "Tailwind"],
-    demoUrl: "#",
-    codeUrl: "#",
-  },
-  {
-    title: "ETL Data Pipeline",
-    description:
-      "An automated ETL pipeline for processing and analyzing large datasets.",
-    image: "/placeholder.svg?height=200&width=400",
-    tags: ["Python", "Apache Airflow", "AWS", "Spark"],
-    demoUrl: "#",
-    codeUrl: "#",
-  },
-  {
-    title: "Real-time Analytics Dashboard",
-    description:
-      "A real-time dashboard for monitoring system metrics and user behavior.",
-    image: "/placeholder.svg?height=200&width=400",
-    tags: ["React", "Socket.io", "Node.js", "Redis"],
-    demoUrl: "#",
-    codeUrl: "#",
-  },
-  {
-    title: "NLP Text Analysis Tool",
-    description:
-      "A tool for analyzing and extracting insights from unstructured text data.",
-    image: "/placeholder.svg?height=200&width=400",
-    tags: ["Python", "NLTK", "spaCy", "Flask"],
-    demoUrl: "#",
-    codeUrl: "#",
+      "A full-stack analytics platform showcasing performances of players on CanMNT. 500+ active users and counting.",
+    image: "/canmnt.png?height=200&width=400",
+    tags: ["FastAPI", "Prisma", "Next.js"],
+    demoUrl: "https://canmnt.live",
+    codeUrl: "https://github.com/wxp02/CanMNT-26-Live",
   },
 ];
 
@@ -696,7 +675,7 @@ import {
 
 const skills = [
   { name: "Python", icon: FileCode },
-  { name: "JavaScript", icon: FileCode },
+  { name: "JavaScript/TypeScript", icon: FileCode },
   { name: "React", icon: Layout },
   { name: "Data Analysis", icon: BarChart3 },
   { name: "Machine Learning", icon: Brain },
